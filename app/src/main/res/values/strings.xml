@@ -1,0 +1,180 @@
+<resources>
+    <string name="app_name">ABHYUDAY</string>
+    <string name="app_tagline">AI-Powered Rural Business Advisory Platform</string>
+
+    <!-- Location Inputs -->
+    <string name="label_location">Geographic Location</string>
+    <string name="label_village">Village</string>
+    <string name="label_block">Block / Tehsil</string>
+    <string name="label_district">District</string>
+    <string name="hint_village">e.g. Rampur</string>
+    <string name="hint_block">e.g. Manjhanpur</string>
+    <string name="hint_district">e.g. Kaushambi</string>
+
+    <!-- Margin Capital Inputs -->
+    <string name="label_margin_capital">Available Margin Capital (₹)</string>
+    <string name="desc_margin_capital">Beneficiary 10% contribution for government scheme credit</string>
+    <string name="label_quick_presets">Quick Preset Margins</string>
+    <string name="chip_10k">₹10,000</string>
+    <string name="chip_14k">₹14,000 (Micro Max)</string>
+    <string name="chip_25k">₹25,000</string>
+    <string name="chip_50k">₹50,000</string>
+    <string name="chip_1l">₹1,00,000</string>
+    <string name="chip_2l">₹2,00,000</string>
+    <string name="chip_5l">₹5,00,000 (Term Max)</string>
+
+    <!-- Category & Custom Business Details Inputs -->
+    <string name="label_category">Business Category / Trade</string>
+    <string name="desc_category">Enter your custom business category or select a preset</string>
+    <string name="hint_custom_category">e.g. Cold-Pressed Oil Mill, Tailoring, Spice Grinding</string>
+    <string name="label_business_details">Business Concept &amp; Details</string>
+    <string name="desc_business_details">Describe your business idea, required equipment, or tap the mic button to speak</string>
+    <string name="hint_business_details">e.g. Planning to buy a seed cleaner and mini expeller to sell pure mustard oil to nearby villages...</string>
+    <string name="btn_voice_input">Speak Details</string>
+    <string name="voice_input_prompt">Speak your business idea &amp; details...</string>
+    <string name="voice_error_not_available">Speech recognition is not available on this device.</string>
+
+    <!-- Enterprise Intelligence Engine -->
+    <string name="title_ai_advisory">Enterprise Feasibility Intelligence</string>
+    <string name="btn_generate_ai">Run Feasibility Analysis</string>
+    <string name="btn_analyzing_ai">Analyzing local demand, risk &amp; unit economics...</string>
+    <string name="ai_badge_active">AI Engine Active</string>
+    <string name="ai_badge_offline">Offline Feasibility Engine</string>
+    <string name="label_api_key">Gemini API Key</string>
+    <string name="hint_api_key">Enter or paste Gemini API key</string>
+    <string name="desc_api_key">Required for live Gemini AI analysis. Without a key, fast offline heuristics are used.</string>
+    <string name="btn_save_key">Save Key</string>
+    <string name="btn_configure_ai">Gemini AI Setup</string>
+    <string name="title_ai_projections">AI Real-Time Financial Projections</string>
+    <string name="metric_ai_monthly_revenue">Est. Monthly Revenue</string>
+    <string name="metric_ai_monthly_profit">Est. Monthly Net Profit</string>
+    <string name="metric_ai_breakeven">Breakeven Timeline</string>
+    <string name="metric_ai_roi">Estimated ROI</string>
+
+    <!-- Category Preset Chips -->
+    <string name="chip_dairy">Dairy Farming</string>
+    <string name="chip_retail">Grocery / Kirana</string>
+    <string name="chip_food">Food Processing</string>
+    <string name="chip_textiles">Tailoring / Textiles</string>
+    <string name="chip_poultry">Poultry Farming</string>
+    <string name="chip_agro">Agro Services</string>
+    <string name="chip_handicrafts">Handicrafts</string>
+
+    <!-- Scheme Qualification -->
+    <string name="title_scheme_qualification">Government Scheme Router &amp; Qualification</string>
+    <string name="scheme_micro_finance">Micro Finance Scheme</string>
+    <string name="scheme_term_loan">Term Loan Scheme</string>
+    <string name="label_interest_rate">Interest Rate</string>
+    <string name="label_tenure">Tenure</string>
+    <string name="label_moratorium">Moratorium (Grace)</string>
+    <string name="label_max_cap">Scheme Ceiling</string>
+    <string name="warning_loan_capped">Statutory loan cap applied!</string>
+    <string name="years_suffix">Years</string>
+    <string name="months_suffix">Months</string>
+    <string name="quarters_suffix">Quarters</string>
+
+    <!-- Financial Breakdown -->
+    <string name="title_financial_breakdown">Smart Financial Structuring</string>
+    <string name="metric_project_cost">Total Project Cost</string>
+    <string name="metric_loan_amount">Eligible Concessional Loan</string>
+    <string name="metric_promoter_margin">Beneficiary Margin</string>
+    <string name="metric_promoter_equity">Promoter Total Equity</string>
+    <string name="metric_loan_to_cost">Loan-to-Cost Ratio</string>
+
+    <string name="title_cost_breakdown">Cost &amp; Working Capital Allocation</string>
+    <string name="cost_capex">Fixed Assets &amp; Machinery (CAPEX 70%)</string>
+    <string name="cost_working_capital">Working Capital (25%)</string>
+    <string name="cost_contingency">Contingency Reserve (5%)</string>
+    <string name="cost_monthly_opex">Est. Monthly OPEX</string>
+    <string name="cost_raw_materials">Raw Materials (55%)</string>
+    <string name="cost_labor">Labor &amp; Wages (25%)</string>
+    <string name="cost_utilities">Utilities &amp; Fuel (12%)</string>
+    <string name="cost_maintenance">Maintenance (8%)</string>
+
+    <!-- Feasibility & SWOT -->
+    <string name="title_feasibility">Hyper-Local Feasibility Report</string>
+    <string name="title_swot">Budget-Calibrated SWOT Matrix</string>
+    <string name="swot_strengths">Strengths</string>
+    <string name="swot_weaknesses">Weaknesses</string>
+    <string name="swot_opportunities">Opportunities</string>
+    <string name="swot_threats">Threats</string>
+    <string name="dim_market_reach">Market Reach &amp; Distribution</string>
+    <string name="dim_opportunity">Opportunity &amp; Unserved Niches</string>
+    <string name="dim_threats">Threats &amp; Risk Mitigation</string>
+    <string name="dim_competitor">Competitor Density &amp; Moat</string>
+    <string name="dim_pricing">Product Valuation &amp; Pricing</string>
+    <string name="dim_recommendations">Key Strategic Recommendations</string>
+
+    <!-- Amortization Schedule -->
+    <string name="title_amortization">Quarterly Amortization Schedule</string>
+    <string name="col_quarter">Qtr</string>
+    <string name="col_phase">Phase</string>
+    <string name="col_opening">Opening Principal</string>
+    <string name="col_principal">Principal</string>
+    <string name="col_interest">Interest</string>
+    <string name="col_outflow">Total Outflow</string>
+    <string name="col_closing">Closing Balance</string>
+    <string name="phase_moratorium">Grace (Interest)</string>
+    <string name="phase_repayment">Repayment</string>
+    <string name="btn_show_schedule">Show Full Quarterly Schedule</string>
+    <string name="btn_hide_schedule">Hide Quarterly Schedule</string>
+
+    <!-- Actions & Audio -->
+    <string name="btn_play_audio">Play Audio Summary</string>
+    <string name="btn_stop_audio">Stop Audio</string>
+    <string name="btn_share">Share Advisory Summary</string>
+    <string name="btn_recalculate">Update Advisory &amp; Schedule</string>
+    <string name="lang_toggle_en">English</string>
+    <string name="lang_toggle_hi">हिंदी</string>
+    <string name="tts_playing">Synthesizing spoken audio summary...</string>
+    <string name="tts_stopped">Audio summary stopped.</string>
+    <string name="tts_hindi_missing">Hindi voice data not installed on device. Playing in English.</string>
+
+    <!-- Validation Errors -->
+    <string name="error_margin_too_low">Minimum margin capital is ₹1,000 (minimum project cost ₹10,000) to qualify for concessional credit.</string>
+    <string name="error_margin_too_high">Entered margin capital exceeds ₹5,00,000 limit (₹50.00 Lakh project cost ceiling) for concessional schemes.</string>
+    <string name="error_invalid_input">Please enter a valid positive margin capital amount.</string>
+
+    <!-- Eligible Schemes Router Card -->
+    <string name="title_eligible_schemes">Eligible Government Schemes</string>
+    <string name="subtitle_eligible_schemes">Concessional credit &amp; capital subsidy programs matched for your business venture</string>
+    <string name="tag_primary_active">PRIMARY ROUTED (ACTIVE)</string>
+    <string name="tag_sector_scheme">SECTOR SUBSIDY PROGRAM</string>
+    <string name="tag_national_scheme">NATIONAL FLAGSHIP SCHEME</string>
+    <string name="label_scheme_authority">Nodal Agency</string>
+    <string name="label_scheme_interest">Interest Terms</string>
+    <string name="label_scheme_ceiling">Loan Ceiling</string>
+    <string name="label_scheme_subsidy">Subsidy &amp; Grant</string>
+    <string name="label_scheme_tenure">Tenure &amp; Grace</string>
+
+    <!-- Scheme Documents & Application Details -->
+    <string name="title_required_documents">Mandatory Documentation</string>
+    <string name="title_application_process">Official Application Pathway</string>
+    <string name="btn_view_documents">View Documents &amp; How to Apply</string>
+    <string name="btn_hide_documents">Hide Application Details</string>
+    <string name="label_official_portal">Official Portal</string>
+
+    <!-- Business Health & Cash Flow Diagnostic (Section 8) -->
+    <string name="title_business_health">Business Health &amp; Cash-Flow Diagnostic</string>
+    <string name="subtitle_business_health">Understand revenue, expenses, net margins, and debt sustainability</string>
+    <string name="label_monthly_revenue">Est. Monthly Revenue</string>
+    <string name="label_monthly_expenses">Est. Monthly OpEx</string>
+    <string name="label_net_monthly_profit">Net Monthly Profit</string>
+    <string name="label_operating_margin">Net Profit Margin</string>
+    <string name="label_cash_flow_status">Cash Flow Status</string>
+    <string name="label_debt_service_burden">Debt Service (EMI)</string>
+    <string name="status_healthy">HEALTHY CASH FLOW</string>
+    <string name="status_moderate">MODERATE SURPLUS</string>
+    <string name="status_at_risk">CASH FLOW AT RISK</string>
+
+    <!-- Growth Objectives (Section 5) -->
+    <string name="label_growth_objective">Growth Objective</string>
+    <string name="objective_new_venture">New Venture</string>
+    <string name="objective_expansion">Expansion</string>
+    <string name="objective_modernization">Modernization</string>
+    <string name="objective_market_export">Market Reach</string>
+
+    <!-- Action Plan: What Should I Do Next? (Section 9 & 10) -->
+    <string name="label_action_plan_title">Action Plan: What Should I Do Next?</string>
+    <string name="label_action_plan_subtitle">Step-by-step roadmap to launch, fund, and scale your venture</string>
+</resources>

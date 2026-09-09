@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ABHYUDAY (अभ्युदय)</string>
+    <string name="app_tagline">एआई-संचालित ग्रामीण व्यापार एवं वित्त सलाहकार मंच</string>
+
+    <!-- Location Inputs -->
+    <string name="label_location">भौगोलिक स्थान</string>
+    <string name="label_village">गाँव</string>
+    <string name="label_block">प्रखंड / तहसील</string>
+    <string name="label_district">जिला</string>
+    <string name="hint_village">उदा. रामपुर</string>
+    <string name="hint_block">उदा. मंझनपुर</string>
+    <string name="hint_district">उदा. कौशाम्बी</string>
+
+    <!-- Margin Capital Inputs -->
+    <string name="label_margin_capital">उपलब्ध मार्जिन पूंजी (₹)</string>
+    <string name="desc_margin_capital">सरकारी योजना ऋण हेतु लाभार्थी का 10% अंशदान</string>
+    <string name="label_quick_presets">त्वरित मार्जिन चयन</string>
+    <string name="chip_10k">₹10,000</string>
+    <string name="chip_14k">₹14,000 (सूक्ष्म सीमा)</string>
+    <string name="chip_25k">₹25,000</string>
+    <string name="chip_50k">₹50,000</string>
+    <string name="chip_1l">₹1,00,000</string>
+    <string name="chip_2l">₹2,00,000</string>
+    <string name="chip_5l">₹5,00,000 (सावधि सीमा)</string>
+
+    <!-- Category & Custom Business Details Inputs -->
+    <string name="label_category">व्यवसाय श्रेणी / व्यापार</string>
+    <string name="desc_category">अपनी पसंद का व्यवसाय लिखें या नीचे दिए गए सुझाव चुनें</string>
+    <string name="hint_custom_category">उदा. तेल पेराई मिल, सिलाई केंद्र, मसाला चक्की</string>
+    <string name="label_business_details">व्यवसाय का विचार एवं कार्य योजना</string>
+    <string name="desc_business_details">अपने व्यवसाय की रूपरेखा, आवश्यक उपकरण लिखें या माइक दबाकर बोलें</string>
+    <string name="hint_business_details">उदा. तेल पेराई मशीन लगाकर स्थानीय किसानों से सरसों लेकर शुद्ध तेल बेचने की योजना है...</string>
+    <string name="btn_voice_input">माइक से बोलें</string>
+    <string name="voice_input_prompt">अपने व्यवसाय का विचार व विवरण बोलें...</string>
+    <string name="voice_error_not_available">इस डिवाइस पर वॉइस पहचान उपलब्ध नहीं है।</string>
+
+    <!-- Enterprise Intelligence Engine -->
+    <string name="title_ai_advisory">उद्यम व्यवहार्यता एवं विश्लेषण इंजन</string>
+    <string name="btn_generate_ai">व्यवहार्यता एवं जोखिम विश्लेषण चलाएं</string>
+    <string name="btn_analyzing_ai">स्थानीय मांग, जोखिम व वित्तीय अर्थशास्त्र का विश्लेषण जारी है...</string>
+    <string name="ai_badge_active">एआई विश्लेषण सक्रिय</string>
+    <string name="ai_badge_offline">ऑफलाइन विश्लेषण मोड</string>
+    <string name="label_api_key">Gemini API कुंजी</string>
+    <string name="hint_api_key">अपनी Gemini API कुंजी दर्ज करें या पेस्ट करें</string>
+    <string name="desc_api_key">लाइव AI विश्लेषण हेतु आवश्यक। कुंजी न होने पर तेज ऑफलाइन सलाह उपलब्ध है।</string>
+    <string name="btn_save_key">कुंजी सहेजें</string>
+    <string name="btn_configure_ai">Gemini AI सेटअप</string>
+    <string name="title_ai_projections">AI रियल-टाइम वित्तीय अनुमान</string>
+    <string name="metric_ai_monthly_revenue">अनुमानित मासिक बिक्री</string>
+    <string name="metric_ai_monthly_profit">अनुमानित शुद्ध मुनाफा</string>
+    <string name="metric_ai_breakeven">लागत वसूली अवधि</string>
+    <string name="metric_ai_roi">अनुमानित लाभ दर (ROI)</string>
+
+    <!-- Category Preset Chips -->
+    <string name="chip_dairy">डेयरी व्यवसाय</string>
+    <string name="chip_retail">किराना दुकान</string>
+    <string name="chip_food">खाद्य प्रसंस्करण</string>
+    <string name="chip_textiles">सिलाई व वस्त्र</string>
+    <string name="chip_poultry">मुर्गी पालन</string>
+    <string name="chip_agro">कृषि सेवा केंद्र</string>
+    <string name="chip_handicrafts">हस्तशिल्प व कुटीर</string>
+
+    <!-- Scheme Qualification -->
+    <string name="title_scheme_qualification">सरकारी योजना स्कीम राउटर व पात्रता</string>
+    <string name="scheme_micro_finance">सूक्ष्म वित्त योजना (Micro Finance)</string>
+    <string name="scheme_term_loan">सावधि ऋण योजना (Term Loan)</string>
+    <string name="label_interest_rate">ब्याज दर</string>
+    <string name="label_tenure">ऋण अवधि</string>
+    <string name="label_moratorium">मोराटोरियम (छूट अवधि)</string>
+    <string name="label_max_cap">अधिकतम योजना सीमा</string>
+    <string name="warning_loan_capped">वैधानिक अधिकतम ऋण सीमा लागू!</string>
+    <string name="years_suffix">वर्ष</string>
+    <string name="months_suffix">माह</string>
+    <string name="quarters_suffix">तिमाही</string>
+
+    <!-- Financial Breakdown -->
+    <string name="title_financial_breakdown">स्मार्ट वित्तीय संरचना</string>
+    <string name="metric_project_cost">कुल परियोजना लागत</string>
+    <string name="metric_loan_amount">पात्र रियायती ऋण</string>
+    <string name="metric_promoter_margin">लाभार्थी अंशदान (मार्जिन)</string>
+    <string name="metric_promoter_equity">प्रवर्तक की कुल पूंजी</string>
+    <string name="metric_loan_to_cost">ऋण-लागत अनुपात</string>
+
+    <string name="title_cost_breakdown">लागत एवं कार्यशील पूंजी आवंटन</string>
+    <string name="cost_capex">अचल संपत्ति एवं मशीनरी (70%)</string>
+    <string name="cost_working_capital">कार्यशील पूंजी (25%)</string>
+    <string name="cost_contingency">आकस्मिक आरक्षित निधि (5%)</string>
+    <string name="cost_monthly_opex">अनुमानित मासिक परिचालन खर्च</string>
+    <string name="cost_raw_materials">कच्चा माल एवं सामग्री (55%)</string>
+    <string name="cost_labor">श्रम एवं मजदूरी (25%)</string>
+    <string name="cost_utilities">बिजली, ईंधन एवं ढुलाई (12%)</string>
+    <string name="cost_maintenance">रखरखाव एवं अन्य (8%)</string>
+
+    <!-- Feasibility & SWOT -->
+    <string name="title_feasibility">अति-स्थानीय व्यवहार्यता रिपोर्ट</string>
+    <string name="title_swot">बजट-आधारित स्वॉट (SWOT) विश्लेषण</string>
+    <string name="swot_strengths">ताकत (Strengths)</string>
+    <string name="swot_weaknesses">कमजोरियां (Weaknesses)</string>
+    <string name="swot_opportunities">अवसर (Opportunities)</string>
+    <string name="swot_threats">जोखिम (Threats)</string>
+    <string name="dim_market_reach">बाजार पहुंच एवं स्थानीय वितरण माध्यम</string>
+    <string name="dim_opportunity">व्यापारिक अवसर एवं नए क्षेत्र</string>
+    <string name="dim_threats">जोखिम पहचान एवं सुरक्षा के उपाय</string>
+    <string name="dim_competitor">प्रतियोगी विश्लेषण एवं स्थानीय बढ़त</string>
+    <string name="dim_pricing">उत्पाद मूल्य एवं सही मूल्य-निर्धारण</string>
+    <string name="dim_recommendations">प्रमुख रणनीतिक सुझाव</string>
+
+    <!-- Amortization Schedule -->
+    <string name="title_amortization">तिमाही ऋण अदायगी अनुसूची</string>
+    <string name="col_quarter">तिमाही</string>
+    <string name="col_phase">चरण</string>
+    <string name="col_opening">प्रारंभिक मूलधन</string>
+    <string name="col_principal">मूलधन किश्त</string>
+    <string name="col_interest">ब्याज</string>
+    <string name="col_outflow">कुल भुगतान</string>
+    <string name="col_closing">अंतिम शेष</string>
+    <string name="phase_moratorium">छूट अवधि (केवल ब्याज)</string>
+    <string name="phase_repayment">मूलधन अदायगी</string>
+    <string name="btn_show_schedule">पूरी अदायगी अनुसूची देखें</string>
+    <string name="btn_hide_schedule">अदायगी अनुसूची छिपाएं</string>
+
+    <!-- Actions & Audio -->
+    <string name="btn_play_audio">ऑडियो सारांश सुनें</string>
+    <string name="btn_stop_audio">ऑडियो बंद करें</string>
+    <string name="btn_share">सलाहकार रिपोर्ट साझा करें</string>
+    <string name="btn_recalculate">सलाह एवं अनुसूची अपडेट करें</string>
+    <string name="lang_toggle_en">English</string>
+    <string name="lang_toggle_hi">हिंदी</string>
+    <string name="tts_playing">आवाज में सारांश सुनाया जा रहा है...</string>
+    <string name="tts_stopped">ऑडियो रोक दिया गया है।</string>
+    <string name="tts_hindi_missing">डिवाइस पर हिंदी वॉइस डेटा उपलब्ध नहीं है। अंग्रेजी में सुनाया जा रहा है।</string>
+
+    <!-- Validation Errors -->
+    <string name="error_margin_too_low">सरकारी रियायती ऋण हेतु न्यूनतम मार्जिन पूंजी ₹1,000 (न्यूनतम परियोजना लागत ₹10,000) होना अनिवार्य है।</string>
+    <string name="error_margin_too_high">दर्ज मार्जिन पूंजी ₹5,00,000 की अधिकतम सीमा (₹50.00 लाख परियोजना लागत सीमा) से अधिक है।</string>
+    <string name="error_invalid_input">कृपया एक वैध धनात्मक मार्जिन पूंजी राशि दर्ज करें।</string>
+
+    <!-- Eligible Schemes Router Card -->
+    <string name="title_eligible_schemes">पात्र सरकारी योजनाएं</string>
+    <string name="subtitle_eligible_schemes">आपके व्यवसाय हेतु उपलब्ध रियायती ऋण एवं अनुदान योजनाएं</string>
+    <string name="tag_primary_active">प्राथमिक चयनित योजना (सक्रिय)</string>
+    <string name="tag_sector_scheme">क्षेत्रीय सब्सिडी कार्यक्रम</string>
+    <string name="tag_national_scheme">राष्ट्रीय फ्लैगशिप योजना</string>
+    <string name="label_scheme_authority">नोडल एजेंसी</string>
+    <string name="label_scheme_interest">ब्याज दर</string>
+    <string name="label_scheme_ceiling">ऋण सीमा</string>
+    <string name="label_scheme_subsidy">सब्सिडी एवं अनुदान</string>
+    <string name="label_scheme_tenure">अवधि एवं छूट</string>
+
+    <!-- Scheme Documents & Application Details -->
+    <string name="title_required_documents">अनिवार्य दस्तावेज</string>
+    <string name="title_application_process">आधिकारिक आवेदन प्रक्रिया</string>
+    <string name="btn_view_documents">दस्तावेज व आवेदन प्रक्रिया देखें</string>
+    <string name="btn_hide_documents">विवरण छिपाएं</string>
+    <string name="label_official_portal">आधिकारिक पोर्टल</string>
+
+    <!-- Business Health & Cash Flow Diagnostic (Section 8) -->
+    <string name="title_business_health">व्यापार स्वास्थ्य एवं नकद प्रवाह विश्लेषण</string>
+    <string name="subtitle_business_health">शुद्ध लाभ मार्जिन, ऋण अदायगी क्षमता एवं नकदी प्रवाह की स्थिति</string>
+    <string name="label_monthly_revenue">अनुमानित मासिक आय</string>
+    <string name="label_monthly_expenses">अनुमानित मासिक खर्च (OpEx)</string>
+    <string name="label_net_monthly_profit">शुद्ध मासिक लाभ</string>
+    <string name="label_operating_margin">शुद्ध लाभ मार्जिन</string>
+    <string name="label_cash_flow_status">नकद प्रवाह स्थिति</string>
+    <string name="label_debt_service_burden">मासिक ऋण किस्त (EMI)</string>
+    <string name="status_healthy">स्वस्थ नकद प्रवाह (सरप्लस)</string>
+    <string name="status_moderate">मध्यम नकद प्रवाह</string>
+    <string name="status_at_risk">जोखिमपूर्ण नकद प्रवाह</string>
+
+    <!-- Growth Objectives (Section 5) -->
+    <string name="label_growth_objective">व्यापारिक लक्ष्य</string>
+    <string name="objective_new_venture">नया उद्यम</string>
+    <string name="objective_expansion">व्यापार विस्तार</string>
+    <string name="objective_modernization">आधुनिकीकरण</string>
+    <string name="objective_market_export">बाजार पहुंच</string>
+
+    <!-- Action Plan: What Should I Do Next? (Section 9 & 10) -->
+    <string name="label_action_plan_title">कार्ययोजना: अब मुझे क्या करना चाहिए?</string>
+    <string name="label_action_plan_subtitle">उद्यम शुरू करने, ऋण प्राप्त करने और विस्तार हेतु चरणबद्ध मार्गदर्शिका</string>
+</resources>
