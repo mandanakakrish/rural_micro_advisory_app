@@ -22,7 +22,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
@@ -32,7 +31,6 @@ import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.Badge
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Email
-import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Phone
@@ -64,7 +62,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
@@ -79,9 +76,7 @@ import com.ruraladvisory.ui.theme.OutlineWarm
 import com.ruraladvisory.ui.theme.SurfaceCard
 import com.ruraladvisory.ui.theme.SurfaceCream
 import com.ruraladvisory.ui.theme.SwotOpportunityBlueBg
-import com.ruraladvisory.ui.theme.SwotStrengthGreenBg
 import com.ruraladvisory.ui.theme.TextHighContrast
-import com.ruraladvisory.ui.theme.TextMediumContrast
 import com.ruraladvisory.ui.theme.TextMuted
 import com.ruraladvisory.ui.theme.WarmCreamBackground
 import com.ruraladvisory.ui.viewmodel.AdvisoryUiState
@@ -359,7 +354,6 @@ fun UserDetailsScreen(
                     listOf("None", "Women Entrepreneur", "Specially Abled", "Ex-Servicemen").forEach { spec ->
                         val label = when (spec) {
                             "None" -> if (isHindi) "कोई नहीं" else "None"
-                            "Women Entrepreneur" -> if (isHindi) "महिला उद्यमी" else "Women"
                             "Specially Abled" -> if (isHindi) "दिव्यांगजन" else "Divyangjan"
                             "Ex-Servicemen" -> if (isHindi) "भूतपूर्व सैनिक" else "Ex-Servicemen"
                             else -> spec

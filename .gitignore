@@ -1,5 +1,14 @@
 *.iml
 .gradle
+.agents
+.kotlin/
+.idea
+ORIGINAL_REQUEST.md
+PROJECT.md
+SECURITY.md
+TEST_INFRA.md
+TEST_READY.md
+.kotlin/sessions
 /local.properties
 /build
 /app/build
