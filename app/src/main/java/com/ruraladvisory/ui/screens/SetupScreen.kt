@@ -2,7 +2,6 @@ package com.ruraladvisory.ui.screens
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Box
@@ -22,7 +21,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.Badge
 import androidx.compose.material.icons.filled.Edit
-import androidx.compose.material.icons.filled.Lightbulb
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
@@ -51,13 +49,11 @@ import com.ruraladvisory.ui.theme.TextMediumContrast
 import com.ruraladvisory.ui.theme.TextMuted
 import com.ruraladvisory.ui.theme.ForestGreenPrimary
 import com.ruraladvisory.ui.theme.SurfaceCream
-import com.ruraladvisory.ui.theme.SwotStrengthGreenBg
 import com.ruraladvisory.ui.viewmodel.AdvisoryUiState
 import com.ruraladvisory.ui.viewmodel.AdvisoryViewModel
 
 /**
  * Screen 1: Entrepreneur Profile & Enterprise Setup
- * Reference: WEB/src/components/InputForm.tsx
  */
 @Composable
 fun SetupScreen(

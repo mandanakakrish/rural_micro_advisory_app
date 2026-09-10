@@ -6,12 +6,16 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.imePadding
+import androidx.compose.foundation.layout.isImeVisible
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -76,6 +80,7 @@ import com.ruraladvisory.ui.viewmodel.AdvisoryViewModel
  * Screen 5: AI Rural Sahayak Conversational Advisor
  * Reference: WEB/src/components/AdvisorView.tsx & ChatAdvisorModal.tsx
  */
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun AdvisorChatScreen(
     uiState: AdvisoryUiState,
@@ -89,6 +94,13 @@ fun AdvisorChatScreen(
     val isHindi = uiState.language == LanguageCode.HI
     val samplePrompts = remember(uiState.language) { RuralAdvisorChatEngine.getSamplePrompts(uiState.language) }
 
+    val isImeVisible = WindowInsets.isImeVisible
+    LaunchedEffect(isImeVisible) {
+        if (isImeVisible && uiState.chatMessages.isNotEmpty()) {
+            listState.animateScrollToItem(uiState.chatMessages.size - 1)
+        }
+    }
+
     LaunchedEffect(uiState.chatMessages.size) {
         if (uiState.chatMessages.isNotEmpty()) {
             listState.animateScrollToItem(uiState.chatMessages.size - 1)
@@ -99,6 +111,7 @@ fun AdvisorChatScreen(
         modifier = modifier
             .fillMaxSize()
             .background(WarmCreamBackground)
+            .imePadding()
     ) {
         // Chat Header Banner
         Card(

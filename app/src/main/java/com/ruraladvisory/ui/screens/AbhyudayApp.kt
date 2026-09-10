@@ -17,10 +17,13 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.isImeVisible
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -79,6 +82,7 @@ import kotlinx.coroutines.launch
  * Master Application Container implementing the 5-screen navigation architecture
  * directly referencing WEB/src/App.tsx.
  */
+@OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun AbhyudayApp(
     viewModel: AdvisoryViewModel = viewModel(),
@@ -173,6 +177,7 @@ fun AbhyudayApp(
         Scaffold(
             modifier = modifier.fillMaxSize(),
             containerColor = WarmCreamBackground,
+            contentWindowInsets = WindowInsets(0, 0, 0, 0),
             snackbarHost = { SnackbarHost(snackbarHostState) },
             topBar = {
                 AbhyudayTopBar(
@@ -182,11 +187,13 @@ fun AbhyudayApp(
                 )
             },
             bottomBar = {
-                AbhyudayBottomBar(
-                    currentTab = uiState.activeTab,
-                    language = uiState.language,
-                    onTabSelect = { viewModel.selectTab(it) }
-                )
+                if (!WindowInsets.isImeVisible) {
+                    AbhyudayBottomBar(
+                        currentTab = uiState.activeTab,
+                        language = uiState.language,
+                        onTabSelect = { viewModel.selectTab(it) }
+                    )
+                }
             }
         ) { paddingValues ->
         AnimatedContent(
