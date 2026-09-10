@@ -86,7 +86,7 @@ fun SetupScreen(
                     color = TextHighContrast
                 )
                 Text(
-                    text = if (isHindi) "स्थान, मार्जिन पूंजी एवं व्यवसाय विवरण" else "Location, margin capital & enterprise scope",
+                    text = if (isHindi) "पैमाना, मार्जिन पूंजी एवं व्यवसाय विवरण" else "Scale, margin capital & enterprise scope",
                     style = MaterialTheme.typography.bodySmall,
                     color = TextMuted,
                     fontSize = 11.sp
@@ -213,16 +213,8 @@ fun SetupScreen(
             onSelectProfile = { viewModel.selectProfile(it) }
         )
 
-        // 2. Input Form (Location, MSME Scale, Capacity, Margin Slider, Category, Goal)
+        // 2. Input Form (MSME Scale, Capacity, Margin Slider, Category, Goal)
         InputFormCard(
-            village = uiState.village,
-            onVillageChange = { viewModel.onVillageChanged(it) },
-            block = uiState.block,
-            onBlockChange = { viewModel.onBlockChanged(it) },
-            district = uiState.district,
-            onDistrictChange = { viewModel.onDistrictChanged(it) },
-            state = uiState.state,
-            onStateChange = { viewModel.onStateChanged(it) },
             selectedScale = uiState.scale,
             onScaleSelect = { viewModel.onScaleSelected(it) },
             productionCapacity = uiState.productionCapacity,

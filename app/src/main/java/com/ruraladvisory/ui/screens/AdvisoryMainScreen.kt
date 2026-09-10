@@ -204,13 +204,8 @@ fun AdvisoryMainScreen(
                 onSelectProfile = { viewModel.selectProfile(it) }
             )
 
-            // 1. Interactive Input Form Card with Location, Scale, Capacity, Margin & Details
+            // 1. Interactive Input Form Card with Scale, Capacity, Margin & Details
             InputFormCard(
-                village = uiState.village,
-                block = uiState.block,
-                district = uiState.district,
-                state = uiState.state,
-                onStateChange = { viewModel.onStateChanged(it) },
                 selectedScale = uiState.scale,
                 onScaleSelect = { viewModel.onScaleSelected(it) },
                 productionCapacity = uiState.productionCapacity,
@@ -220,9 +215,6 @@ fun AdvisoryMainScreen(
                 customCategory = uiState.customCategory,
                 businessDetails = uiState.businessDetails,
                 language = uiState.language,
-                onVillageChange = { viewModel.onVillageChanged(it) },
-                onBlockChange = { viewModel.onBlockChanged(it) },
-                onDistrictChange = { viewModel.onDistrictChanged(it) },
                 onMarginChange = { viewModel.onMarginChanged(it) },
                 onMarginInputTextChange = { viewModel.onMarginInputTextChanged(it) },
                 onCustomCategoryChange = { viewModel.onCustomCategoryChanged(it) },

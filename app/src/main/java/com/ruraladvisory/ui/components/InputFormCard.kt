@@ -28,9 +28,7 @@ import androidx.compose.material.icons.filled.ContentCut
 import androidx.compose.material.icons.filled.Egg
 import androidx.compose.material.icons.filled.Category
 import androidx.compose.material.icons.filled.Description
-import androidx.compose.material.icons.filled.LocationOn
 import androidx.compose.material.icons.filled.Mic
-import androidx.compose.material.icons.filled.Place
 import androidx.compose.material.icons.filled.Restaurant
 import androidx.compose.material.icons.filled.ShoppingBag
 import androidx.compose.material.icons.filled.Storefront
@@ -85,21 +83,13 @@ import com.ruraladvisory.ui.theme.TextMuted
 @OptIn(ExperimentalLayoutApi::class)
 @Composable
 fun InputFormCard(
-    village: String,
-    block: String,
-    district: String,
     marginCapital: Double,
     marginInputText: String,
     customCategory: String = "",
     businessDetails: String = "",
     language: LanguageCode,
-    onVillageChange: (String) -> Unit,
-    onBlockChange: (String) -> Unit,
-    onDistrictChange: (String) -> Unit,
     onMarginChange: (Double) -> Unit,
     onMarginInputTextChange: (String) -> Unit,
-    state: String = "",
-    onStateChange: (String) -> Unit = {},
     selectedScale: BusinessScale = BusinessScale.MICRO,
     onScaleSelect: ((BusinessScale) -> Unit)? = null,
     productionCapacity: String = "",
@@ -126,20 +116,7 @@ fun InputFormCard(
                 .padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
-            // 1. Geographic Location Section
-            LocationSection(
-                village = village,
-                block = block,
-                district = district,
-                state = state,
-                language = language,
-                onVillageChange = onVillageChange,
-                onBlockChange = onBlockChange,
-                onDistrictChange = onDistrictChange,
-                onStateChange = onStateChange
-            )
-
-            // 2. Business Scale & Production Capacity Section
+            // 1. Business Scale & Production Capacity Section
             BusinessScaleAndCapacitySection(
                 selectedScale = selectedScale,
                 productionCapacity = productionCapacity,
@@ -148,7 +125,7 @@ fun InputFormCard(
                 onProductionCapacityChange = onProductionCapacityChange
             )
 
-            // 3. Margin Capital Slider & Chips
+            // 2. Margin Capital Slider & Chips
             MarginCapitalSection(
                 marginCapital = marginCapital,
                 marginInputText = marginInputText,
@@ -157,7 +134,7 @@ fun InputFormCard(
                 onMarginInputTextChange = onMarginInputTextChange
             )
 
-            // 4. Custom Business Category & Details Section with Mic Button
+            // 3. Custom Business Category & Details Section with Mic Button
             CustomCategoryAndDetailsSection(
                 customCategory = customCategory,
                 businessDetails = businessDetails,
@@ -170,128 +147,12 @@ fun InputFormCard(
                 onStartVoiceInput = onStartVoiceInput
             )
 
-            // 5. Growth Objective Selector (Section 5)
+            // 4. Growth Objective Selector
             GrowthObjectiveSection(
                 selectedObjective = selectedObjective,
                 language = language,
                 onObjectiveSelect = onObjectiveSelect
             )
-        }
-    }
-}
-
-@Composable
-private fun LocationSection(
-    village: String,
-    block: String,
-    district: String,
-    state: String,
-    language: LanguageCode,
-    onVillageChange: (String) -> Unit,
-    onBlockChange: (String) -> Unit,
-    onDistrictChange: (String) -> Unit,
-    onStateChange: (String) -> Unit
-) {
-    Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-        Row(
-            verticalAlignment = Alignment.CenterVertically,
-            horizontalArrangement = Arrangement.spacedBy(8.dp)
-        ) {
-            Icon(
-                imageVector = Icons.Default.LocationOn,
-                contentDescription = null,
-                tint = ForestGreenPrimary,
-                modifier = Modifier.size(24.dp)
-            )
-            Text(
-                text = stringResource(R.string.label_location),
-                style = MaterialTheme.typography.titleMedium,
-                color = TextHighContrast,
-                fontWeight = FontWeight.Bold
-            )
-        }
-
-        Row(
-            modifier = Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.spacedBy(8.dp)
-        ) {
-            OutlinedTextField(
-                value = village,
-                onValueChange = onVillageChange,
-                label = { Text(stringResource(R.string.label_village)) },
-                placeholder = { Text(stringResource(R.string.hint_village)) },
-                singleLine = true,
-                modifier = Modifier.weight(1f),
-                colors = textFieldColors()
-            )
-
-            OutlinedTextField(
-                value = block,
-                onValueChange = onBlockChange,
-                label = { Text(stringResource(R.string.label_block)) },
-                placeholder = { Text(stringResource(R.string.hint_block)) },
-                singleLine = true,
-                modifier = Modifier.weight(1f),
-                colors = textFieldColors()
-            )
-        }
-
-        OutlinedTextField(
-            value = district,
-            onValueChange = onDistrictChange,
-            label = { Text(stringResource(R.string.label_district)) },
-            placeholder = { Text(stringResource(R.string.hint_district)) },
-            leadingIcon = {
-                Icon(
-                    imageVector = Icons.Default.Place,
-                    contentDescription = null,
-                    tint = ForestGreenPrimary
-                )
-            },
-            singleLine = true,
-            modifier = Modifier.fillMaxWidth(),
-            colors = textFieldColors()
-        )
-
-        OutlinedTextField(
-            value = state,
-            onValueChange = onStateChange,
-            label = { Text(if (language == LanguageCode.HI) "राज्य (State)" else "State") },
-            placeholder = { Text("e.g. Gujarat") },
-            singleLine = true,
-            modifier = Modifier.fillMaxWidth(),
-            colors = textFieldColors()
-        )
-
-        // Quick State Chips
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .horizontalScroll(rememberScrollState()),
-            horizontalArrangement = Arrangement.spacedBy(6.dp)
-        ) {
-            val statePresets = listOf("Uttar Pradesh", "Gujarat", "Rajasthan", "Madhya Pradesh", "Maharashtra")
-            statePresets.forEach { presetState ->
-                val isSelected = state.equals(presetState, ignoreCase = true)
-                FilterChip(
-                    selected = isSelected,
-                    onClick = { onStateChange(presetState) },
-                    label = { Text(presetState, fontSize = 11.sp) },
-                    colors = FilterChipDefaults.filterChipColors(
-                        selectedContainerColor = ForestGreenPrimary.copy(alpha = 0.15f),
-                        selectedLabelColor = ForestGreenDark,
-                        containerColor = SurfaceCard,
-                        labelColor = TextMediumContrast
-                    ),
-                    border = FilterChipDefaults.filterChipBorder(
-                        enabled = true,
-                        selected = isSelected,
-                        borderColor = OutlineLight,
-                        selectedBorderColor = ForestGreenPrimary,
-                        borderWidth = if (isSelected) 1.5.dp else 1.dp
-                    )
-                )
-            }
         }
     }
 }
