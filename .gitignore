@@ -15,4 +15,6 @@ TEST_READY.md
 /captures
 .externalNativeBuild
 local.properties
-
+.env
+*.env
+backend/
